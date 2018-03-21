@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Beautiful Checkbox Example</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<link type="text/css" rel="stylesheet" href="beautiful-checkbox.css">
+		
+		<style type="text/css">
+			/* THIS KINDA SHOULD BE ALREADY IN YOUR CSS. ELSE IT WILL NOT BE DISPLAYED PROPERLY. 
+			**	Foundation includes it
+			**/
+				html{box-sizing: border-box;}
+				*, ::after, ::before{box-sizing: inherit;}
+			/*
+			**	This is not important, just some styles to display it better!
+			**/
+			
+			
+			body{font-family:"Tahoma";}
+			#title{float: left;width: 60%;padding: 5% 10% 5% 20%;box-sizing: border-box;}
+			#title h1{font-weight: 900;font-size: 100px;color:#636363;}
+			#demo{float:right;width:40%;box-sizing:border-box;padding:5% 5%;}
+			#demo h2{text-align:center;font-weight:500;font-size:32px;color:#636363;}
+				body{"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;}
+	
+				.m-b-2{margin-bottom:2em;}
+		</style>
+	</head>
+	<body>
+		<div id="title">
+			<h1>Beautiful Checkbox</h1>
+		</div>
+		<div id="demo">
+			<h2>Example Demo</h2>
+				
+
+			<div>
+				
+				<!-- Large Checkbox -->
+				<div class="checkbox large m-b-2">
+					<div class="checkbox-overlay">
+						<input type="checkbox" />
+						<div class="checkbox-container">
+							<div class="checkbox-checkmark"></div>
+						</div>
+						<label>Label of a large checkbox</label>
+					</div>
+				</div>
+				
+				<!-- Medium Checkbox -->
+				<div class="checkbox medium m-b-2">
+					<div class="checkbox-overlay">
+						<input type="checkbox" checked="checked" />
+						<div class="checkbox-container">
+							<div class="checkbox-checkmark"></div>
+						</div>
+						<label>Label of a medium checkbox aligned right</label>
+					</div>
+				</div>
+				
+				<!-- Small Checkbox -->
+				<div class="checkbox small m-b-2">
+					<div class="checkbox-overlay">
+						<input type="checkbox" />
+						<div class="checkbox-container">
+							<div class="checkbox-checkmark"></div>
+						</div>
+						<label>Label of a small checkbox</label>
+					</div>
+				</div>
+				
+				<!-- Tiny Checkbox -->
+				<div class="checkbox tiny m-b-2">
+					<div class="checkbox-overlay">
+						<input type="checkbox" checked="checked" />
+						<div class="checkbox-container">
+							<div class="checkbox-checkmark"></div>
+						</div>
+						<label>Label of a tiny checkbox aligned right</label>
+					</div>
+				</div>
+				
+				<!-- Medium Checkbox -->
+				<div class="checkbox ch-align-right medium m-b-2">
+					<div class="checkbox-overlay">
+						<input type="checkbox" checked="checked" />
+						<div class="checkbox-container">
+							<div class="checkbox-checkmark"></div>
+						</div>
+						<label>Im aligned to right</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
