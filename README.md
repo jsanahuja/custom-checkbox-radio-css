@@ -18,6 +18,6 @@ Custom checkbox made with pure CSS
 </div>
 ```
 
-> ** You'll find more details in the example.html **
+> **You'll find more details in the example.html**
 
 
