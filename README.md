@@ -1,4 +1,4 @@
-# beautiful checkbox css
+# Beautiful Checkbox css
 Custom checkbox made with pure CSS
 
 ## Example
