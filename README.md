@@ -2,7 +2,7 @@
 Custom checkbox made with pure CSS
 
 ## Example
-![Example](https://shurimages.com/u/uf2Tr.png)
+![Example](https://shurimages.com/u/S9mkz.png)
 
 ## Usage
 
@@ -19,5 +19,3 @@ Custom checkbox made with pure CSS
 ```
 
 > **You'll find more details in the example.html**
-
-
