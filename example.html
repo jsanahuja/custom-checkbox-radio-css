@@ -18,13 +18,13 @@
 			**/
 			
 			
-			body{font-family:"Tahoma";}
-			#title{float: left;width: 60%;padding: 5% 10% 5% 20%;box-sizing: border-box;}
-			#title h1{font-weight: 900;font-size: 100px;color:#636363;}
-			#demo{float:right;width:40%;box-sizing:border-box;padding:5% 5%;}
-			#demo h2{text-align:center;font-weight:500;font-size:32px;color:#636363;}
+				body{font-family:"Tahoma";}
+				#title{float: left;width: 60%;padding: 5% 10% 5% 20%;box-sizing: border-box;}
+				#title h1{font-weight: 900;font-size: 100px;color:#636363;}
+				#demo{float:right;width:40%;box-sizing:border-box;padding:5% 5%;}
+				#demo h2{text-align:center;font-weight:500;font-size:32px;color:#636363;}
 				body{"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;}
-	
+				.m-t-3{margin-top:3em;}
 				.m-b-2{margin-bottom:2em;}
 		</style>
 	</head>
@@ -82,7 +82,7 @@
 					</div>
 				</div>
 				
-				<!-- Medium Checkbox -->
+				<!-- Aligned Right Medium Checkbox -->
 				<div class="checkbox ch-align-right medium m-b-2">
 					<div class="checkbox-overlay">
 						<input type="checkbox" checked="checked" />
@@ -90,6 +90,26 @@
 							<div class="checkbox-checkmark"></div>
 						</div>
 						<label>Im aligned to right</label>
+					</div>
+				</div>
+				<!-- Aligned Right Checked Disabled Medium Checkbox -->
+				<div class="checkbox disabled medium m-b-2">
+					<div class="checkbox-overlay">
+						<input type="checkbox" checked="checked" />
+						<div class="checkbox-container">
+							<div class="checkbox-checkmark"></div>
+						</div>
+						<label>I am checked but disabled</label>
+					</div>
+				</div>
+				<!-- AUnchecked Disabled Medium Checkbox -->
+				<div class="checkbox disabled medium m-b-2">
+					<div class="checkbox-overlay">
+						<input type="checkbox" />
+						<div class="checkbox-container">
+							<div class="checkbox-checkmark"></div>
+						</div>
+						<label>I am unchecked and disabled</label>
 					</div>
 				</div>
 			</div>

@@ -25,3 +25,7 @@
 .checkbox.small .checkbox-container .checkbox-checkmark:after{height:15.6px;width:7.8px;left:9.1px;top:3px;border-width: 0 2px 4px 0;}
 .checkbox.medium .checkbox-container .checkbox-checkmark:after{height:20.4px;width:10.2px;left:11.9px;top:4px;border-width: 0 3px 5px 0;}
 .checkbox.large .checkbox-container .checkbox-checkmark:after{height:24px;width:12px;left:14px;top:5px;border-width: 0 3px 6px 0;}
+.checkbox.disabled input{display:none;}
+.checkbox.disabled input:checked ~ .checkbox-container > .checkbox-checkmark{opacity: .25;cursor: not-allowed;border:0;}
+.checkbox.disabled .checkbox-container > .checkbox-checkmark{opacity: .25;cursor: not-allowed;border:1px #666 solid;}
+.checkbox.disabled label{opacity: .25;cursor: not-allowed;}
