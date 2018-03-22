@@ -19,10 +19,14 @@
 			
 			
 				body{font-family:"Tahoma";}
-				#title{float: left;width: 60%;padding: 5% 10% 5% 20%;box-sizing: border-box;}
+				#title{float: left;width: 60%;padding: 2.5% 10% 0% 20%;box-sizing: border-box;}
 				#title h1{font-weight: 900;font-size: 100px;color:#636363;}
-				#demo{float:right;width:40%;box-sizing:border-box;padding:5% 5%;}
-				#demo h2{text-align:center;font-weight:500;font-size:32px;color:#636363;}
+				h2.demo-title{text-align:left;font-weight:500;font-size:32px;color:#636363;}
+				.demo{width:40%;float:right;box-sizing:border-box;padding:2.5% 5% 0% 5%;}
+				.demo_1cols{width:40%;float:right;box-sizing:border-box;padding:0% 5%;}
+				.demo_2cols{width:60%;float:left;padding-left:20%;}
+				.subdemo-half{float:left;width:50%;}
+				
 				body{"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;}
 				.m-t-3{margin-top:3em;}
 				.m-b-2{margin-bottom:2em;}
@@ -32,56 +36,134 @@
 		<div id="title">
 			<h1>Beautiful Checkbox</h1>
 		</div>
-		<div id="demo">
-			<h2>Example Demo</h2>
-				
-
-			<div>
-				
-				<!-- Large Checkbox -->
-				<div class="checkbox large m-b-2">
-					<div class="checkbox-overlay">
-						<input type="checkbox" />
-						<div class="checkbox-container">
-							<div class="checkbox-checkmark"></div>
-						</div>
-						<label>Label of a large checkbox</label>
+		<div class="demo">
+			<h2 class="demo-title">Choose the size</h2>
+			<!-- Large Checkbox -->
+			<div class="checkbox large m-b-2">
+				<div class="checkbox-overlay">
+					<input type="checkbox" />
+					<div class="checkbox-container">
+						<div class="checkbox-checkmark"></div>
 					</div>
+					<label>Label of a large checkbox</label>
 				</div>
-				
-				<!-- Medium Checkbox -->
+			</div>
+			
+			<!-- Medium Checkbox -->
+			<div class="checkbox medium m-b-2">
+				<div class="checkbox-overlay">
+					<input type="checkbox" checked="checked" />
+					<div class="checkbox-container">
+						<div class="checkbox-checkmark"></div>
+					</div>
+					<label>Label of a medium checkbox aligned right</label>
+				</div>
+			</div>
+			
+			<!-- Small Checkbox -->
+			<div class="checkbox small m-b-2">
+				<div class="checkbox-overlay">
+					<input type="checkbox" />
+					<div class="checkbox-container">
+						<div class="checkbox-checkmark"></div>
+					</div>
+					<label>Label of a small checkbox</label>
+				</div>
+			</div>
+			
+			<!-- Tiny Checkbox -->
+			<div class="checkbox tiny m-b-2">
+				<div class="checkbox-overlay">
+					<input type="checkbox" checked="checked" />
+					<div class="checkbox-container">
+						<div class="checkbox-checkmark"></div>
+					</div>
+					<label>Label of a tiny checkbox aligned right</label>
+				</div>
+			</div>
+		</div>
+		<div class="demo_2cols">
+			<h2 class="demo-title">Choose the style</h2>
+			<!-- Default Medium Checkbox -->
+			<div class="subdemo-half">
 				<div class="checkbox medium m-b-2">
 					<div class="checkbox-overlay">
 						<input type="checkbox" checked="checked" />
 						<div class="checkbox-container">
 							<div class="checkbox-checkmark"></div>
 						</div>
-						<label>Label of a medium checkbox aligned right</label>
+						<label>Default</label>
 					</div>
 				</div>
-				
-				<!-- Small Checkbox -->
-				<div class="checkbox small m-b-2">
-					<div class="checkbox-overlay">
-						<input type="checkbox" />
-						<div class="checkbox-container">
-							<div class="checkbox-checkmark"></div>
-						</div>
-						<label>Label of a small checkbox</label>
-					</div>
-				</div>
-				
-				<!-- Tiny Checkbox -->
-				<div class="checkbox tiny m-b-2">
+				<!-- Rounded-3 Medium Checkbox -->
+				<div class="checkbox rounded-3 medium m-b-2">
 					<div class="checkbox-overlay">
 						<input type="checkbox" checked="checked" />
 						<div class="checkbox-container">
 							<div class="checkbox-checkmark"></div>
 						</div>
-						<label>Label of a tiny checkbox aligned right</label>
+						<label>Rounded-3</label>
 					</div>
 				</div>
+				<!-- Rounded-6 Medium Checkbox -->
+				<div class="checkbox rounded-6 medium m-b-2">
+					<div class="checkbox-overlay">
+						<input type="checkbox" checked="checked" />
+						<div class="checkbox-container">
+							<div class="checkbox-checkmark"></div>
+						</div>
+						<label>Rounded-6</label>
+					</div>
+				</div>
+			</div>
+			<div class="subdemo-half">
+				<!-- Rounded-8 Medium Checkbox -->
+				<div class="checkbox rounded-8 medium m-b-2">
+					<div class="checkbox-overlay">
+						<input type="checkbox" checked="checked" />
+						<div class="checkbox-container">
+							<div class="checkbox-checkmark"></div>
+						</div>
+						<label>Rounded-8</label>
+					</div>
+				</div>
+				<!-- Rounded-10 Medium Checkbox -->
+				<div class="checkbox rounded-10 medium m-b-2">
+					<div class="checkbox-overlay">
+						<input type="checkbox" checked="checked" />
+						<div class="checkbox-container">
+							<div class="checkbox-checkmark"></div>
+						</div>
+						<label>Rounded-10</label>
+					</div>
+				</div>
+				<!-- Rounded-16 Medium Checkbox -->
+				<div class="checkbox rounded-16 medium m-b-2">
+					<div class="checkbox-overlay">
+						<input type="checkbox" checked="checked" />
+						<div class="checkbox-container">
+							<div class="checkbox-checkmark"></div>
+						</div>
+						<label>Rounded-16</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="demo_1cols">
+			<h2 class="demo-title">Position & Disabling</h2>
 				
+
+			<div>				
+				<!-- Aligned Left Medium Checkbox -->
+				<div class="checkbox medium m-b-2">
+					<div class="checkbox-overlay">
+						<input type="checkbox" checked="checked" />
+						<div class="checkbox-container">
+							<div class="checkbox-checkmark"></div>
+						</div>
+						<label>Im aligned to left</label>
+					</div>
+				</div>
 				<!-- Aligned Right Medium Checkbox -->
 				<div class="checkbox ch-align-right medium m-b-2">
 					<div class="checkbox-overlay">
@@ -112,6 +194,9 @@
 						<label>I am unchecked and disabled</label>
 					</div>
 				</div>
+				
+				
+
 			</div>
 		</div>
 	</body>

@@ -29,3 +29,8 @@
 .checkbox.disabled input:checked ~ .checkbox-container > .checkbox-checkmark{opacity: .25;cursor: not-allowed;border:0;}
 .checkbox.disabled .checkbox-container > .checkbox-checkmark{opacity: .25;cursor: not-allowed;border:1px #666 solid;}
 .checkbox.disabled label{opacity: .25;cursor: not-allowed;}
+.checkbox.rounded-3 .checkbox-container .checkbox-checkmark{border-radius:3px;}
+.checkbox.rounded-6 .checkbox-container .checkbox-checkmark{border-radius:6px;}
+.checkbox.rounded-8 .checkbox-container .checkbox-checkmark{border-radius:8px;}
+.checkbox.rounded-10 .checkbox-container .checkbox-checkmark{border-radius:10px;}
+.checkbox.rounded-16 .checkbox-container .checkbox-checkmark{border-radius:16px;}
