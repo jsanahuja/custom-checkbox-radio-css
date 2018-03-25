@@ -1,6 +1,6 @@
 .checkbox{cursor:pointer;}
 .checkbox div.checkbox-overlay{position:relative;overflow:hidden;}
-.checkbox input{opacity:0;position: absolute;cursor:pointer;left: 0;margin: 0;top: 0;z-index:99999;width: 100%;height: 100%;}
+.checkbox input{opacity:0;position: absolute;cursor:pointer;left: 0;margin: 0;top: 0;z-index:1;width: 100%;height: 100%;}
 .checkbox label{float:left;line-height:initial;}
 .checkbox.ch-align-right label{float:right;line-height:initial;}
 .checkbox div.checkbox-container{float:left;}
