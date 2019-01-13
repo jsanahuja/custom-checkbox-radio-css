@@ -2,19 +2,17 @@
 Custom checkbox made with pure CSS
 
 ## Example
-![Example](https://shurimages.com/u/S9mkz.png)
+![Example](https://shurimages.com/u/ub5cM.jpg)
 
 ## Usage
 
 ```
-<div class="checkbox medium m-b-2">
-	<div class="checkbox-overlay">
-		<input type="checkbox" checked="checked" />
-		<div class="checkbox-container">
-			<div class="checkbox-checkmark"></div>
-		</div>
-		<label>Label of a medium checkbox aligned right</label>
+<div class="checkbox">
+	<div class="checkbox-container">
+		<input id="checkbox-default" type="checkbox" />
+		<div class="checkbox-checkmark"></div>
 	</div>
+	<label for="checkbox-default">Default</label>
 </div>
 ```
 

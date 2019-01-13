@@ -1,36 +1,43 @@
-.checkbox{cursor:pointer;}
-.checkbox div.checkbox-overlay{position:relative;overflow:hidden;}
-.checkbox input{opacity:0;position: absolute;cursor:pointer;left: 0;margin: 0;top: 0;z-index:1;width: 100%;height: 100%;}
-.checkbox label{float:left;line-height:initial;}
-.checkbox.ch-align-right label{float:right;line-height:initial;}
-.checkbox div.checkbox-container{float:left;}
-.checkbox.ch-align-right div.checkbox-container{float:right;}
-.checkbox div.checkbox-container .checkbox-checkmark{position:relative;background-color:#eee;border:1px #ddd solid;}
-.checkbox div.checkbox-checkmark::after{display:none;position: absolute;content: "";border: solid white;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);}
-.checkbox input:checked ~ .checkbox-container > .checkbox-checkmark{background-color:#2ba6cb;border:0;}
-.checkbox input:checked ~ .checkbox-container > .checkbox-checkmark:after{display:initial;}
-.checkbox input:checked:hover ~ .checkbox-container > .checkbox-checkmark{background-color:#2ba6cb;border:0;}
-.checkbox input:checked:hover ~ .checkbox-container > .checkbox-checkmark:after{border-color:white;}
-.checkbox input:hover ~ .checkbox-container > .checkbox-checkmark{background-color:#ddd;border:1px #ccc solid;}
-.checkbox input:hover ~ .checkbox-container > .checkbox-checkmark:after{display:initial;border-color:rgba(190, 190, 190, 1);border-top:0px;border-left:0px;}
-.checkbox.tiny label{font-size:0.9em;padding:0.14em 1em;}
-.checkbox.small label{font-size:1em;padding:0.25em 1em;}
-.checkbox.medium label{font-size:1.25em;padding:0.28em 0.8em;}
-.checkbox.large label{font-size: 1.5em;padding: 0.26em 0.8em;}
+.checkbox .checkbox-container{display:inline-block;position:relative;}
+.checkbox .checkbox-container input{cursor:pointer;opacity: 0;position: absolute;margin: 0;width: 100%;height: 100%;z-index: 1;}
+.checkbox .checkbox-container input:hover ~ .checkbox-checkmark::after{display:block;opacity:0.5;}
+.checkbox .checkbox-container input:checked ~ .checkbox-checkmark{background:#2ba5ca;border-color:transparent;}
+.checkbox .checkbox-container input:checked ~ .checkbox-checkmark::after{display:block;opacity:1;border-color:white;}
+.checkbox .checkbox-container .checkbox-checkmark{background-color: #eee;border: 1px #ddd solid;}
+.checkbox .checkbox-container .checkbox-checkmark::after{box-sizing: inherit;cursor:pointer;display:none;position: absolute;content: "";border: solid #bebebe;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);}
+.checkbox .checkbox-container .checkbox-checkmark:hover::after{display:block;}
+.checkbox label{display:inline;padding-left:0.5rem;vertical-align: super;}
+.checkbox label:hover ~ .checkbox-checkmark::after{display:block;opacity:0.5;}
+/* default (small) */
+.checkbox label{font-size:1em;}
+.checkbox .checkbox-container .checkbox-checkmark{width:26px;height:26px;}
+.checkbox .checkbox-container .checkbox-checkmark::after{height:15.6px;width:7.8px;left:9.1px;top:3px;border-width: 0 2px 4px 0;}
+/* tiny */
+.checkbox.tiny label{font-size:0.9em;}
 .checkbox.tiny .checkbox-container .checkbox-checkmark{width:20px;height:20px;}
-.checkbox.small .checkbox-container .checkbox-checkmark{width:26px;height:26px;}
-.checkbox.medium .checkbox-container .checkbox-checkmark{width:34px;height:34px;}
-.checkbox.large .checkbox-container .checkbox-checkmark{width:40px;height:40px;}
 .checkbox.tiny .checkbox-container .checkbox-checkmark:after{height:12px;width:6px;left:7px;top:3px;border-width:0 2px 3px 0;}
-.checkbox.small .checkbox-container .checkbox-checkmark:after{height:15.6px;width:7.8px;left:9.1px;top:3px;border-width: 0 2px 4px 0;}
-.checkbox.medium .checkbox-container .checkbox-checkmark:after{height:20.4px;width:10.2px;left:11.9px;top:4px;border-width: 0 3px 5px 0;}
-.checkbox.large .checkbox-container .checkbox-checkmark:after{height:24px;width:12px;left:14px;top:5px;border-width: 0 3px 6px 0;}
-.checkbox.disabled input{display:none;}
-.checkbox.disabled input:checked ~ .checkbox-container > .checkbox-checkmark{opacity: .25;cursor: not-allowed;border:0;}
-.checkbox.disabled .checkbox-container > .checkbox-checkmark{opacity: .25;cursor: not-allowed;border:1px #666 solid;}
-.checkbox.disabled label{opacity: .25;cursor: not-allowed;}
-.checkbox.rounded-3 .checkbox-container .checkbox-checkmark{border-radius:3px;}
-.checkbox.rounded-6 .checkbox-container .checkbox-checkmark{border-radius:6px;}
-.checkbox.rounded-8 .checkbox-container .checkbox-checkmark{border-radius:8px;}
+/* small */
+.checkbox.small label{font-size:1em;}
+.checkbox.small .checkbox-container .checkbox-checkmark{width:26px;height:26px;}
+.checkbox.small .checkbox-container .checkbox-checkmark::after{height:15.6px;width:7.8px;left:9.1px;top:3px;border-width: 0 2px 4px 0;}
+/* medium */
+.checkbox.medium label{font-size:1.25em;}
+.checkbox.medium .checkbox-container .checkbox-checkmark{width:34px;height:34px;}
+.checkbox.medium .checkbox-container .checkbox-checkmark::after{height:20.4px;width:10.2px;left:11.9px;top:4px;border-width: 0 3px 5px 0;}
+/* large */
+.checkbox.large label{font-size:1.5em;}
+.checkbox.large .checkbox-container .checkbox-checkmark{width:40px;height:40px;}
+.checkbox.large .checkbox-container .checkbox-checkmark::after{height:24px;width:12px;left:14px;top:5px;border-width: 0 3px 6px 0;}
+/* disabled */
+.checkbox.disabled .checkbox-container input{display:none;}
+.checkbox.disabled .checkbox-container .checkbox-checkmark{cursor:not-allowed;}
+.checkbox.disabled .checkbox-container .checkbox-checkmark{background: #ddd;border: 1px #ccc solid;}
+.checkbox.disabled .checkbox-container .checkbox-checkmark::after{display:block;border-color:#bbb;opacity:0.5;cursor:not-allowed;}
+.checkbox.disabled .checkbox-container input:checked ~ .checkbox-checkmark{background:#ddd;}
+/* rounded */
+.checkbox.rounded-3  .checkbox-container .checkbox-checkmark{border-radius:3px;}
+.checkbox.rounded-6  .checkbox-container .checkbox-checkmark{border-radius:6px;}
+.checkbox.rounded-8  .checkbox-container .checkbox-checkmark{border-radius:8px;}
 .checkbox.rounded-10 .checkbox-container .checkbox-checkmark{border-radius:10px;}
 .checkbox.rounded-16 .checkbox-container .checkbox-checkmark{border-radius:16px;}
+.checkbox.rounded-22 .checkbox-container .checkbox-checkmark{border-radius:22px;}

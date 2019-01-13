@@ -8,28 +8,25 @@
 		<link type="text/css" rel="stylesheet" href="beautiful-checkbox.css">
 		
 		<style type="text/css">
-			/* THIS KINDA SHOULD BE ALREADY IN YOUR CSS. ELSE IT WILL NOT BE DISPLAYED PROPERLY. 
-			**	Foundation includes it
-			**/
+			/* This is kind of required for a properly display. Foundation 6 includes it */
 				html{box-sizing: border-box;}
 				*, ::after, ::before{box-sizing: inherit;}
-			/*
-			**	This is not important, just some styles to display it better!
-			**/
-			
-			
-				body{font-family:"Tahoma";}
-				#title{float: left;width: 60%;padding: 2.5% 10% 0% 20%;box-sizing: border-box;}
+				
+			/* This is not important, just some styles to display it better! */			
+				body{font-family:"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;}
+				#title{width: 100%;max-width:1000px;margin:0 auto;text-align:center;box-sizing: border-box;}
 				#title h1{font-weight: 900;font-size: 100px;color:#636363;}
 				h2.demo-title{text-align:left;font-weight:500;font-size:32px;color:#636363;}
-				.demo{width:40%;float:right;box-sizing:border-box;padding:2.5% 5% 0% 5%;}
-				.demo_1cols{width:40%;float:right;box-sizing:border-box;padding:0% 5%;}
-				.demo_2cols{width:60%;float:left;padding-left:20%;}
-				.subdemo-half{float:left;width:50%;}
+				.demo{width: 100%;margin:0 auto;max-width:1000px;box-sizing:border-box;}
+				.demo .demo-section{width:100%;max-width:330px;float:left;}
+				.demo .demo-section .checkbox{margin-top:1em;}
+				@media only screen and (max-width:1000px){
+					.demo .demo-section{width:100%;max-width:100%;padding:2em;}
+					.demo .demo-title{text-align:center;}
+				}
+
 				
-				body{"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;}
-				.m-t-3{margin-top:3em;}
-				.m-b-2{margin-bottom:2em;}
+				
 		</style>
 	</head>
 	<body>
@@ -37,166 +34,129 @@
 			<h1>Beautiful Checkbox</h1>
 		</div>
 		<div class="demo">
-			<h2 class="demo-title">Choose the size</h2>
-			<!-- Large Checkbox -->
-			<div class="checkbox large m-b-2">
-				<div class="checkbox-overlay">
-					<input type="checkbox" />
+			<div>
+				<h2 class="demo-title">Changes</h2>
+				<ul>
+					<li>Fixed the line break if label is too long</li>
+					<li>Fixed unclickable links in label</li>
+				</ul>
+			</div>
+			<div class="demo-section">
+				<h2 class="demo-title">Choose the size</h2>
+				<div class="checkbox tiny">
 					<div class="checkbox-container">
+						<input id="checkbox-tiny" checked type="checkbox" />
 						<div class="checkbox-checkmark"></div>
 					</div>
-					<label>Label of a large checkbox</label>
+					<label for="checkbox-tiny">Tiny checkbox</label>
 				</div>
-			</div>
-			
-			<!-- Medium Checkbox -->
-			<div class="checkbox medium m-b-2">
-				<div class="checkbox-overlay">
-					<input type="checkbox" checked="checked" />
+				<div class="checkbox small">
 					<div class="checkbox-container">
+						<input id="checkbox-small" checked type="checkbox" />
 						<div class="checkbox-checkmark"></div>
 					</div>
-					<label>Label of a medium checkbox aligned right</label>
+					<label for="checkbox-small">Small checkbox</label>
 				</div>
-			</div>
-			
-			<!-- Small Checkbox -->
-			<div class="checkbox small m-b-2">
-				<div class="checkbox-overlay">
-					<input type="checkbox" />
+				<div class="checkbox medium">
 					<div class="checkbox-container">
+						<input id="checkbox-medium" checked type="checkbox" />
 						<div class="checkbox-checkmark"></div>
 					</div>
-					<label>Label of a small checkbox</label>
+					<label for="checkbox-medium">Medium checkbox (default)</label>
 				</div>
-			</div>
-			
-			<!-- Tiny Checkbox -->
-			<div class="checkbox tiny m-b-2">
-				<div class="checkbox-overlay">
-					<input type="checkbox" checked="checked" />
+				<div class="checkbox large">
 					<div class="checkbox-container">
+						<input id="checkbox-large" checked type="checkbox" />
 						<div class="checkbox-checkmark"></div>
 					</div>
-					<label>Label of a tiny checkbox aligned right</label>
+					<label for="checkbox-large">Large checkbox</label>
 				</div>
 			</div>
-		</div>
-		<div class="demo_2cols">
-			<h2 class="demo-title">Choose the style</h2>
-			<!-- Default Medium Checkbox -->
-			<div class="subdemo-half">
-				<div class="checkbox medium m-b-2">
-					<div class="checkbox-overlay">
-						<input type="checkbox" checked="checked" />
-						<div class="checkbox-container">
-							<div class="checkbox-checkmark"></div>
-						</div>
-						<label>Default</label>
+			<div class="demo-section">
+				<h2 class="demo-title">Choose the state</h2>
+				<div class="checkbox">
+					<div class="checkbox-container">
+						<input id="checkbox-checked" checked type="checkbox" />
+						<div class="checkbox-checkmark"></div>
 					</div>
+					<label for="checkbox-checked">Checked checkbox</label>
 				</div>
-				<!-- Rounded-3 Medium Checkbox -->
-				<div class="checkbox rounded-3 medium m-b-2">
-					<div class="checkbox-overlay">
-						<input type="checkbox" checked="checked" />
-						<div class="checkbox-container">
-							<div class="checkbox-checkmark"></div>
-						</div>
-						<label>Rounded-3</label>
+				<div class="checkbox">
+					<div class="checkbox-container">
+						<input id="checkbox-unchecked" type="checkbox" />
+						<div class="checkbox-checkmark"></div>
 					</div>
+					<label for="checkbox-unchecked">Unchecked checkbox</label>
 				</div>
-				<!-- Rounded-6 Medium Checkbox -->
-				<div class="checkbox rounded-6 medium m-b-2">
-					<div class="checkbox-overlay">
-						<input type="checkbox" checked="checked" />
-						<div class="checkbox-container">
-							<div class="checkbox-checkmark"></div>
-						</div>
-						<label>Rounded-6</label>
+				<div class="checkbox disabled">
+					<div class="checkbox-container">
+						<input id="checkbox-disabled-checked" checked type="checkbox" />
+						<div class="checkbox-checkmark"></div>
 					</div>
+					<!-- Note label has no attribute "for" -->
+					<label>Checked disabled checkbox</label>
+				</div>
+				<div class="checkbox disabled">
+					<div class="checkbox-container">
+						<input id="checkbox-disabled-unchecked" type="checkbox" />
+						<div class="checkbox-checkmark"></div>
+					</div>
+					<!-- Note label has no attribute "for" -->
+					<label>Unchecked disabled checkbox</label>
 				</div>
 			</div>
-			<div class="subdemo-half">
-				<!-- Rounded-8 Medium Checkbox -->
-				<div class="checkbox rounded-8 medium m-b-2">
-					<div class="checkbox-overlay">
-						<input type="checkbox" checked="checked" />
-						<div class="checkbox-container">
-							<div class="checkbox-checkmark"></div>
-						</div>
-						<label>Rounded-8</label>
-					</div>
-				</div>
-				<!-- Rounded-10 Medium Checkbox -->
-				<div class="checkbox rounded-10 medium m-b-2">
-					<div class="checkbox-overlay">
-						<input type="checkbox" checked="checked" />
-						<div class="checkbox-container">
-							<div class="checkbox-checkmark"></div>
-						</div>
-						<label>Rounded-10</label>
-					</div>
-				</div>
-				<!-- Rounded-16 Medium Checkbox -->
-				<div class="checkbox rounded-16 medium m-b-2">
-					<div class="checkbox-overlay">
-						<input type="checkbox" checked="checked" />
-						<div class="checkbox-container">
-							<div class="checkbox-checkmark"></div>
-						</div>
-						<label>Rounded-16</label>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="demo_1cols">
-			<h2 class="demo-title">Position & Disabling</h2>
+			<div class="demo-section">
+				<h2 class="demo-title">Choose the style</h2>
 				
-
-			<div>				
-				<!-- Aligned Left Medium Checkbox -->
-				<div class="checkbox medium m-b-2">
-					<div class="checkbox-overlay">
-						<input type="checkbox" checked="checked" />
-						<div class="checkbox-container">
-							<div class="checkbox-checkmark"></div>
-						</div>
-						<label>Im aligned to left</label>
+				<div class="checkbox">
+					<div class="checkbox-container">
+						<input id="checkbox-default" type="checkbox" />
+						<div class="checkbox-checkmark"></div>
 					</div>
+					<label for="checkbox-default">Default</label>
 				</div>
-				<!-- Aligned Right Medium Checkbox -->
-				<div class="checkbox ch-align-right medium m-b-2">
-					<div class="checkbox-overlay">
-						<input type="checkbox" checked="checked" />
-						<div class="checkbox-container">
-							<div class="checkbox-checkmark"></div>
-						</div>
-						<label>Im aligned to right</label>
+				<div class="checkbox rounded-3">
+					<div class="checkbox-container">
+						<input id="checkbox-rounded-3" type="checkbox" />
+						<div class="checkbox-checkmark"></div>
 					</div>
+					<label for="checkbox-rounded-3">Rounded 3</label>
 				</div>
-				<!-- Aligned Right Checked Disabled Medium Checkbox -->
-				<div class="checkbox disabled medium m-b-2">
-					<div class="checkbox-overlay">
-						<input type="checkbox" checked="checked" />
-						<div class="checkbox-container">
-							<div class="checkbox-checkmark"></div>
-						</div>
-						<label>I am checked but disabled</label>
+				<div class="checkbox rounded-6">
+					<div class="checkbox-container">
+						<input id="checkbox-rounded-6" type="checkbox" />
+						<div class="checkbox-checkmark"></div>
 					</div>
+					<label for="checkbox-rounded-6">Rounded 6</label>
 				</div>
-				<!-- AUnchecked Disabled Medium Checkbox -->
-				<div class="checkbox disabled medium m-b-2">
-					<div class="checkbox-overlay">
-						<input type="checkbox" />
-						<div class="checkbox-container">
-							<div class="checkbox-checkmark"></div>
-						</div>
-						<label>I am unchecked and disabled</label>
+				<div class="checkbox rounded-8">
+					<div class="checkbox-container">
+						<input id="checkbox-rounded-8" type="checkbox" />
+						<div class="checkbox-checkmark"></div>
 					</div>
+					<label for="checkbox-rounded-8">Rounded 8</label>
 				</div>
-				
-				
-
+				<div class="checkbox rounded-10">
+					<div class="checkbox-container">
+						<input id="checkbox-rounded-10" type="checkbox" />
+						<div class="checkbox-checkmark"></div>
+					</div>
+					<label for="checkbox-rounded-10">Rounded 10</label>
+				</div>
+				<div class="checkbox rounded-16">
+					<div class="checkbox-container">
+						<input id="checkbox-rounded-16" type="checkbox" />
+						<div class="checkbox-checkmark"></div>
+					</div>
+					<label for="checkbox-rounded-16">Rounded 16</label>
+				</div>
+				<div class="checkbox rounded-22">
+					<div class="checkbox-container">
+						<input id="checkbox-rounded-22" type="checkbox" />
+						<div class="checkbox-checkmark"></div>
+					</div>
+					<label for="checkbox-rounded-22">Rounded 22 (required to round large)</label>
+				</div>
 			</div>
 		</div>
 	</body>
