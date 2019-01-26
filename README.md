@@ -2,10 +2,11 @@
 Custom checkbox made with pure CSS
 
 ## Example
-![Example](https://shurimages.com/u/ub5cM.jpg)
+![Example](https://shurimages.com/u/FGnTN.png)
 
 ## Usage
 
+For checkboxes
 ```
 <div class="checkbox">
 	<div class="checkbox-container">
@@ -13,6 +14,17 @@ Custom checkbox made with pure CSS
 		<div class="checkbox-checkmark"></div>
 	</div>
 	<label for="checkbox-default">Default</label>
+</div>
+```
+
+For radios
+```
+<div class="radio">
+	<div class="radio-container">
+		<input id="radio-default" checked name="myradio" type="radio" />
+		<div class="radio-checkmark"></div>
+	</div>
+	<label for="radio-default">Default</label>
 </div>
 ```
 

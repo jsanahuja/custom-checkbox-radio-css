@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Beautiful Checkbox Example</title>
+		<title>Custom Checkbox & Radio Example</title>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		
@@ -19,7 +19,7 @@
 				h2.demo-title{text-align:left;font-weight:500;font-size:32px;color:#636363;}
 				.demo{width: 100%;margin:0 auto;max-width:1000px;box-sizing:border-box;}
 				.demo .demo-section{width:100%;max-width:330px;float:left;}
-				.demo .demo-section .checkbox{margin-top:1em;}
+				.demo .demo-section .checkbox,.demo .demo-section .radio{margin-top:1em;}
 				@media only screen and (max-width:1000px){
 					.demo .demo-section{width:100%;max-width:100%;padding:2em;}
 					.demo .demo-title{text-align:center;}
@@ -31,14 +31,15 @@
 	</head>
 	<body>
 		<div id="title">
-			<h1>Beautiful Checkbox</h1>
+			<h1>Custom Checkbox & Radio</h1>
 		</div>
 		<div class="demo">
 			<div>
 				<h2 class="demo-title">Changes</h2>
 				<ul>
-					<li>Fixed the line break if label is too long</li>
-					<li>Fixed unclickable links in label</li>
+					<li>26/01: Added support for radio inputs</li>
+					<li>13/01: Fixed the line break if label is too long</li>
+					<li>13/01: Fixed unclickable links in label</li>
 				</ul>
 			</div>
 			<div class="demo-section">
@@ -158,6 +159,75 @@
 					<label for="checkbox-rounded-22">Rounded 22 (required to round large)</label>
 				</div>
 			</div>
+		
+		
+			
+			<div class="demo-section">
+				<h2 class="demo-title">Choose the size</h2>
+				<div class="radio tiny">
+					<div class="radio-container">
+						<input id="radio-tiny" checked name="radiosize" type="radio" />
+						<div class="radio-checkmark"></div>
+					</div>
+					<label for="radio-tiny">Tiny radio</label>
+				</div>
+				<div class="radio small">
+					<div class="radio-container">
+						<input id="radio-small"  name="radiosize" type="radio" />
+						<div class="radio-checkmark"></div>
+					</div>
+					<label for="radio-small">Small radio</label>
+				</div>
+				<div class="radio medium">
+					<div class="radio-container">
+						<input id="radio-medium"  name="radiosize" type="radio" />
+						<div class="radio-checkmark"></div>
+					</div>
+					<label for="radio-medium">Medium radio (default)</label>
+				</div>
+				<div class="radio large">
+					<div class="radio-container">
+						<input id="radio-large" name="radiosize" type="radio" />
+						<div class="radio-checkmark"></div>
+					</div>
+					<label for="radio-large">Large radio</label>
+				</div>
+			</div>
+			<div class="demo-section">
+				<h2 class="demo-title">Choose the state</h2>
+				<div class="radio">
+					<div class="radio-container">
+						<input id="radio-checked" checked name="radiostate1" type="radio" />
+						<div class="radio-checkmark"></div>
+					</div>
+					<label for="radio-checked">Checked radio</label>
+				</div>
+				<div class="radio">
+					<div class="radio-container">
+						<input id="radio-unchecked" name="radiostate1" type="radio" />
+						<div class="radio-checkmark"></div>
+					</div>
+					<label for="radio-unchecked">Unchecked radio</label>
+				</div>
+				<div class="radio disabled">
+					<div class="radio-container">
+						<input id="radio-disabled-checked" checked name="radiostate2" type="radio" />
+						<div class="radio-checkmark"></div>
+					</div>
+					<!-- Note label has no attribute "for" -->
+					<label>Checked disabled radio</label>
+				</div>
+				<div class="radio disabled">
+					<div class="radio-container">
+						<input id="radio-disabled-unchecked" name="radiostate2" type="radio" />
+						<div class="radio-checkmark"></div>
+					</div>
+					<!-- Note label has no attribute "for" -->
+					<label>Unchecked disabled radio</label>
+				</div>
+			</div>
+		
+		
 		</div>
 	</body>
 </html>
